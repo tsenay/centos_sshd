@@ -14,5 +14,4 @@ Hostname : $(uname -n)
 Enjoy your Docker-Linux Node !
 
 EOF
-echo "Start Success !"
-/usr/sbin/sshd -D
+exec /usr/sbin/sshd -D -e "$@"
